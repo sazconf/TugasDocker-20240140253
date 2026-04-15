@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Home</title>
+</head>
+<body>
+
+<h1>MY WEBSITE 20240140253</h1>
+
+<a href="/form">Tambah Data</a>
+
+<table border="1" width="100%">
+    <tr>
+        <th>No</th>
+        <th>Nama</th>
+        <th>NIM</th>
+        <th>Gender</th>
+    </tr>
+
+    <tr th:each="u,iter : ${listUser}">
+        <td th:text="${iter.count}"></td>
+        <td th:text="${u.nama}"></td>
+        <td th:text="${u.nim}"></td>
+        <td th:text="${u.gender}"></td>
+    </tr>
+
+</table>
+
+</body>
+</html>
